@@ -127,6 +127,12 @@ code {
 }
 
 .products_path h1{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
   text-align: center;
 }
 
@@ -137,11 +143,49 @@ code {
 }
 
 .products_info_path h1{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
   text-align: center;
 }
 
 
 /*END PRODUCTS SCAN COMPONENT*/
+
+/*PRODUCTS LIST*/
+
+.product_name{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+}
+
+.product_price{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+}
+
+.total_to_pay{
+  margin-left: 9px;
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+}
+
+/*END PRODUCTS LIST*/
 
 
 
