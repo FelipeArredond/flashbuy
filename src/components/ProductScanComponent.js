@@ -4,8 +4,6 @@ import { useState } from "react";
 
 const ProductScanComponent = ({products}) => {
 
-    
-
     const productsMap = products.map((product) => {
         return (
                 <ProductComponent name={product.name}
@@ -13,8 +11,6 @@ const ProductScanComponent = ({products}) => {
         );
     });
     
-    
-
     var price = 0;
 
     const priceFinder = products.map((product) => {
@@ -24,17 +20,23 @@ const ProductScanComponent = ({products}) => {
     });
 
     const [payValue, setPayValue] = useState(price);
+    var today = new Date(),
+    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    const [currentDateTime, setCurrentDateTime] = useState(date)
     
     return(
         <div className="products_scanned">
             <div className="products_path">
-                <h1>Products</h1>
+                <h1>Productos Escaneados</h1>
                 {productsMap}
             </div>
             <div className="products_info_path">
-                <h1>Price</h1>
+                <h1>Informacion de Pago</h1>
+                <h3 className='total_to_pay'>
+                    {currentDateTime}</h3>
                 <h3 className='total_to_pay'>
                     Total a Pagar: $ {payValue}</h3>
+                <button className="pay_button">Ir a pagar!</button>    
             </div>
         </div>
     );
