@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const ProductScanComponent = ({products}) => {
 
-    const [payValue, setPayValue] = useState(5000);
+    
 
     const productsMap = products.map((product) => {
         return (
@@ -12,7 +12,19 @@ const ProductScanComponent = ({products}) => {
                 price={product.price} />
         );
     });
+    
+    
 
+    var price = 0;
+
+    const priceFinder = products.map((product) => {
+        return (
+                price = price + parseInt(product.price,10)
+        );
+    });
+
+    const [payValue, setPayValue] = useState(price);
+    
     return(
         <div className="products_scanned">
             <div className="products_path">

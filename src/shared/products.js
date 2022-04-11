@@ -28,5 +28,11 @@ export const products = [
         name: "Pastas La Muñeca",
         price: 4800,
         stock: 50
+    },
+    {
+        id: 5,
+        name: "Pastas Doria",
+        price: 1000,
+        stock: 50
     }
 ]
