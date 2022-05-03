@@ -5,12 +5,10 @@ const user = {loggedIn: false}
 
 export const login = () => {
     user.loggedIn = true;
-    console.log(user.loggedIn)
 }
 
 export const logout = () => {
     user.loggedIn = false;
-    console.log(user.loggedIn)
 }
 
 const useAuth = () => {

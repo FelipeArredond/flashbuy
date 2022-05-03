@@ -1,9 +1,21 @@
 import ProductComponent from "./ProductComponent";
 import Navbar from "./Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
-const ProductScanComponent = ({products}) => {
+const ProductScanComponent = () => {
+
+    const [products, setProducts] = useState([]);
+
+     const getProducts = async () =>{
+        const response = await fetch('http://localhost:53000/products');
+        const products = await response.json()
+        setProducts(products)
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
 
     const productsMap = products.map((product) => {
         return (

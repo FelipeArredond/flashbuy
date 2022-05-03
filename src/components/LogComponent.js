@@ -56,7 +56,7 @@ const LogComponent = () => {
                     className='input_logo_place' onChange={handleChangeId}></input></div>
                     <div className="log_btn">
                         <button type="submit" onClick={handleSubmit}>
-                            <Link to={'/scan'}>Ir a registrar productos!</Link>
+                            <Link to={'/scan'} className={'links'}>Ir a registrar productos!</Link>
                         </button>
                     </div>
                 </div>
