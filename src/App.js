@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import LogComponent from './components/LogComponent';
 import ProductScanComponent from './components/ProductScanComponent';
+import Navbar from './components/Navbar';
 import {products} from "./shared/products";
 
 const App = () => {

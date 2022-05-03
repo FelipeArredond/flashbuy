@@ -25,6 +25,7 @@ code {
 
 .mainContainerLog{
   margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 .container_log_component{
@@ -105,19 +106,40 @@ code {
 
 /*END LOG IN COMPONEN CSS*/
 
+/*NAV*/
+
+.getBackButton{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+  text-align: center;
+}
+
+/*END NAV*/
+
 /*PRODUCTS SCAN COMPONENT*/
 
-.products_scanned{
-  height: 100%;
+.productsContainer{
   width: 75%;
-  margin-top: 110px;
+  height: 100%;
+}
+
+.products_scanned{
+  background-color: #ecf0f1;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
   margin-bottom: 110px;
   border: 2px solid black;
+  border-radius: 15px;
   display: flex;
 }
 
 .products_path{
-  width: 400px;
+  width: 100%;
   height: 100%;
   margin-left: 10px;
   border-right: 2px solid black;
@@ -135,8 +157,7 @@ code {
 
 .products_info_path{
   height: 100%;
-  width: 400px;
-  margin-right: 10px;
+  width: 100%;
 }
 
 .products_info_path h1{
@@ -163,15 +184,6 @@ code {
                         -1px -1px 0 #000;
 }
 
-.product_price{
-  font-family: 'Oswald', sans-serif;
-  color: aliceblue;
-  text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
-}
-
 .total_to_pay{
   margin-left: 9px;
   font-family: 'Oswald', sans-serif;
@@ -189,18 +201,40 @@ code {
   height: 40px;
   border: 0;
   background-color: #6a89cc;
+  border: 2px solid black;
   color: black;
   font-size: 20px;
   border-radius: 8px;
 }
 .pay_button:hover{
   background-color: #82ccdd;
+  border: 2px solid black;
   color: black;
   border: 0;
 }
 
 /*END PRODUCTS LIST*/
 
+.backButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 2px black;
+  height: 40px;
+  border: 0;
+  background-color: #6a89cc;
+  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.backButton:hover{
+  background-color: #82ccdd;
+  border: 2px solid black;
+  color: black;
+  border: 0;
+}
 
 
 
