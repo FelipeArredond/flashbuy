@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Form, FormControl, FormLabel, FormGroup, Button } from "reactstrap";
-
+import ProtectedRoutes, { login } from "./protectedRoutes";
+import { Link } from "react-router-dom";
 
 
 
@@ -32,8 +32,11 @@ const LogComponent = () => {
 
     let handleSubmit = (event) => {
         event.preventDefault();
-        console.log(userName.name)
-        console.log(userId.idUser)
+        if(userName.name === '' || userId.idUser === ''){
+            alert('Porfavor digitar todos tus datos.')
+        }else{
+            login()
+        }
     }
 
     return(
@@ -52,7 +55,9 @@ const LogComponent = () => {
                     placeholder={'Numero de Indetificacion'} 
                     className='input_logo_place' onChange={handleChangeId}></input></div>
                     <div className="log_btn">
-                        <button type="submit" onClick={handleSubmit}><a>Ir a registrar productos!</a></button>
+                        <button type="submit" onClick={handleSubmit}>
+                            <Link to={'/scan'}>Ir a registrar productos!</Link>
+                        </button>
                     </div>
                 </div>
             </div>
