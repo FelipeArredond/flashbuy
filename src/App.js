@@ -10,13 +10,15 @@ export const api = "http://localhost:5000/products"
 const App = () => {
     return(
         <div>
+            <div className="mainpage">
                 <Routes>
-                    <Route path={'/'} element={<LogComponent/>}/>
+                    <Route path={'/login'} element={<LogComponent/>}/>
                     <Route element={<ProtectedRoutes/>}>
                         <Route path='/scan' element={<ProductScanComponent />}/> 
                         <Route path='/modal' element={<ScanProduct/>}/>
                     </Route>      
                 </Routes> 
+            </div>
         </div>
     );
 }
