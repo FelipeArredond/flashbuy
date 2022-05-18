@@ -10,7 +10,8 @@ export const api = "http://localhost:5000/products"
 const App = () => {
     return(
         <div>
-            <h3>Works</h3>
+            <h1>Works</h1>
+            {/*<h3>Works</h3>
             <div className="mainpage">
                 <Routes>
                     <Route path={'/'} element={<LogComponent/>}/>
@@ -20,7 +21,7 @@ const App = () => {
                         
                     </Route>      
                 </Routes> 
-            </div>
+        </div>*/}
         </div>
     );
 }
