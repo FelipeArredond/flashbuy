@@ -10,6 +10,7 @@ export const api = "http://localhost:5000/products"
 const App = () => {
     return(
         <div>
+            <h1>Flashbuy</h1>
             <div className="mainpage">
                 <Routes>
                     <Route path={'/'} element={<LogComponent/>}/>
