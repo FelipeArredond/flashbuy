@@ -128,7 +128,7 @@ code {
 }
 
 .products_scanned{
-  background-color: #ecf0f1;
+  background-color: #60a3bc;
   height: 100%;
   width: 100%;
   margin-top: 50px;
@@ -148,11 +148,8 @@ code {
 .products_path h1{
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
-  text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
   text-align: center;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
 }
 
 .products_info_path{
@@ -163,10 +160,7 @@ code {
 .products_info_path h1{
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
-  text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
   text-align: center;
 }
 
@@ -178,20 +172,15 @@ code {
 .product_name{
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
-  text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
 }
 
 .total_to_pay{
   margin-left: 9px;
   font-family: 'Oswald', sans-serif;
   color: aliceblue;
-  text-shadow: -1px 1px 0 #000,
-                          1px 1px 0 #000,
-                         1px -1px 0 #000,
-                        -1px -1px 0 #000;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
+
 }
 
 .pay_button{
@@ -224,10 +213,10 @@ code {
   border: 0;
   background-color: #6a89cc;
   border: 2px solid black;
-  color: black;
   font-size: 20px;
   border-radius: 8px;
 }
+
 
 .backButton:hover{
   background-color: #82ccdd;

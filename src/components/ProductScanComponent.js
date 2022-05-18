@@ -1,6 +1,7 @@
 import ProductComponent from "./ProductComponent";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 const ProductScanComponent = () => {
@@ -12,6 +13,8 @@ const ProductScanComponent = () => {
         const products = await response.json()
         setProducts(products)
     }
+
+    const location = useLocation();
 
     useEffect(() => {
         getProducts()
@@ -49,6 +52,7 @@ const ProductScanComponent = () => {
                         <h1>Informacion de Pago</h1>
                         <h3 className='total_to_pay'>
                             {currentDateTime}</h3>
+                        <h3 className="total_to_pay">Hola {location.state.username}!</h3>
                         <h3 className='total_to_pay'>
                             Total a Pagar: $ {payValue}</h3>
                         <button className="pay_button">Ir a pagar!</button>    
