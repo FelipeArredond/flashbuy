@@ -10,6 +10,7 @@ export const api = "http://localhost:5000/products"
 const App = () => {
     return(
         <div>
+            console.log('hello')
             hello
         </div>
     );
