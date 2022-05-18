@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Arroz Diana",
+      "price": 3200,
+      "stock": 50
+    },
+    {
+      "id": 12,
+      "name": "Arroz Roa",
+      "price": 2700,
+      "stock": 50
+    },
+    {
+      "id": 3,
+      "name": "Arroz la esperanza",
+      "price": 1500,
+      "stock": 50
+    },
+    {
+      "id": 4,
+      "name": "Papa X kilo",
+      "price": 50000,
+      "stock": 50
+    },
+    {
+      "id": 5,
+      "name": "Carne de res X libra",
+      "price": 72000,
+      "stock": 50
+    },
+    {
+      "id": 6,
+      "name": "Salchicha Ranchera",
+      "price": 4500,
+      "stock": 50
+    },
+    {
+      "id": 7,
+      "name": "Jamon Pietran",
+      "price": 7000,
+      "stock": 50
+    },
+    {
+      "id": 8,
+      "name": "Pan Bimbo",
+      "price": 3000,
+      "stock": 50
+    },
+    {
+      "id": 9,
+      "name": "Pan Mamaines",
+      "price": 2500,
+      "stock": 50
+    },
+    {
+      "id": 10,
+      "name": "Atun",
+      "price": 4000,
+      "stock": 50
+    },
+    {
+      "id": 11,
+      "name": "Salmon X porcion",
+      "price": 80000,
+      "stock": 50
+    },
+    {
+      "id": 12,
+      "name": "Tilapia X porcion",
+      "price": 40000,
+      "stock": 50
+    },
+    {
+      "id": 13,
+      "name": "Arroz Diana Premium",
+      "price": 6000,
+      "stock": 50
+    },
+    {
+      "name": "Pastas la muñeca",
+      "price": 6800,
+      "stock": 50,
+      "id": 14
+    },
+    {
+      "name": "Pastas la muñeca",
+      "price": 6800,
+      "stock": 50,
+      "id": 15
+    }
+  ]
+}

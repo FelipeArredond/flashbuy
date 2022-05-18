@@ -8,8 +8,7 @@ body {
   background: #7F7FD5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-  
+  padding: 0;
 }
 
 code {
@@ -18,8 +17,6 @@ code {
 }
 
 .mainpage{
-  margin-top: 0px;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -27,7 +24,8 @@ code {
 /*LOG IN COMPONENT CSS*/
 
 .mainContainerLog{
-  margin-top: 300px;
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 .container_log_component{
@@ -108,41 +106,129 @@ code {
 
 /*END LOG IN COMPONEN CSS*/
 
+/*NAV*/
+
+.getBackButton{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;
+  text-align: center;
+}
+
+/*END NAV*/
+
 /*PRODUCTS SCAN COMPONENT*/
+
+.productsContainer{
+  width: 75%;
+  height: 100%;
+}
 
 .products_scanned{
   background-color: #60a3bc;
-  border-style: solid;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 110px;
+  border: 2px solid black;
   border-radius: 15px;
-  height: 700px;
-  width: 75%;
-  margin-top: 110px;
   display: flex;
 }
 
 .products_path{
-  width: 400px;
+  width: 100%;
+  height: 100%;
   margin-left: 10px;
   border-right: 2px solid black;
 }
 
 .products_path h1{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
   text-align: center;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
 }
 
 .products_info_path{
-  border-left: 2px solid black;
-  width: 400px;
-  margin-right: 10px;
+  height: 100%;
+  width: 100%;
 }
 
 .products_info_path h1{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
   text-align: center;
 }
 
 
 /*END PRODUCTS SCAN COMPONENT*/
 
+/*PRODUCTS LIST*/
+
+.product_name{
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
+}
+
+.total_to_pay{
+  margin-left: 9px;
+  font-family: 'Oswald', sans-serif;
+  color: aliceblue;
+  text-shadow: 1px 1px 15px black;  margin-top: 0;
+
+}
+
+.pay_button{
+  margin-left: 10px;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 2px black;
+  height: 40px;
+  border: 0;
+  background-color: #6a89cc;
+  border: 2px solid black;
+  color: black;
+  font-size: 20px;
+  border-radius: 8px;
+}
+.pay_button:hover{
+  background-color: #82ccdd;
+  border: 2px solid black;
+  color: black;
+  border: 0;
+}
+
+/*END PRODUCTS LIST*/
+
+.backButton{
+  margin-top: 10px;
+  margin-left: 10px;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 2px black;
+  height: 40px;
+  border: 0;
+  background-color: #6a89cc;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+
+.backButton:hover{
+  background-color: #82ccdd;
+  border: 2px solid black;
+  color: black;
+  border: 0;
+}
+
+.links{
+  text-decoration: none;
+  color: #000;
+}
 
 
 

@@ -2,8 +2,7 @@
 const ProductComponent = (props) => {
     return(
         <div>
-            <h3>{props.name}</h3>
-            <h4>{props.price}</h4>
+            <h3 className='product_name'>{props.name}   ${props.price}</h3>
         </div>
     );
 }
