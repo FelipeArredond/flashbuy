@@ -5,7 +5,7 @@ const Navbar = () =>{
     return(
     <div>
         <button className="backButton" onClick={logout}>
-            <Link to={'/log'} className={'links'}>Volver</Link>
+            <Link to={'/'} className={'links'}>Volver</Link>
         </button>
     </div>
     );
