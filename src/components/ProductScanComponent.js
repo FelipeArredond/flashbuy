@@ -2,6 +2,7 @@ import ProductComponent from "./ProductComponent";
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { api } from "../App";
 
 
 const ProductScanComponent = () => {
@@ -9,7 +10,7 @@ const ProductScanComponent = () => {
     const [products, setProducts] = useState([]);
 
      const getProducts = async () =>{
-        const response = await fetch('http://localhost:53000/products');
+        const response = await fetch(api);
         const products = await response.json()
         setProducts(products)
     }

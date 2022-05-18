@@ -5,7 +5,7 @@ const middleWare = jsonServer.defaults({
     static: "./build"
 })
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 server.use(middleWare);
 server.use(
     jsonServer.rewriter({

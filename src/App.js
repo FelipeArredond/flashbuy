@@ -5,11 +5,12 @@ import Navbar from './components/Navbar';
 import ProtectedRoutes from './components/protectedRoutes';
 import { ScanProduct } from './components/ScanProductComponent';
 
-const api = "http://localhost:5001/users"
+export const api = "http://localhost:5000/products"
 
 const App = () => {
     return(
         <div>
+            <h3>Works</h3>
             <div className="mainpage">
                 <Routes>
                     <Route path={'/'} element={<LogComponent/>}/>
