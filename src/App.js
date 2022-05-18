@@ -5,12 +5,14 @@ import Navbar from './components/Navbar';
 import ProtectedRoutes from './components/protectedRoutes';
 import { ScanProduct } from './components/ScanProductComponent';
 
+const api = "http://localhost:5001/users"
+
 const App = () => {
     return(
         <div>
             <div className="mainpage">
                 <Routes>
-                    <LogComponent/>
+                    <Route path={'/'} element={<LogComponent/>}/>
                     <Route path='/modal' element={<ScanProduct/>}/>
                     <Route element={<ProtectedRoutes/>}>
                         <Route path='/scan' element={<ProductScanComponent />}/> 
