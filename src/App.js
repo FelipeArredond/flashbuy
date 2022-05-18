@@ -12,7 +12,7 @@ const App = () => {
             <h1>Flashbuy</h1>
             <div className="mainpage">
                 <Routes>
-                    <Route path={'/'} element={<LogComponent/>}/>
+                    <Route path={'/login'} element={<LogComponent/>}/>
                     <Route element={<ProtectedRoutes/>}>
                         <Route path='/scan' element={<ProductScanComponent />}/> 
                         <Route path='/modal' element={<ScanProduct/>}/>
