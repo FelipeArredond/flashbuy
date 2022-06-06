@@ -1,10 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ProtectedRoutes, { login } from "./protectedRoutes";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { userContext } from "../context/User";
 
 
 
 const LogComponent = () => {
+
+    const navigate = useNavigate()
+
+    const {setUserData} = useContext(userContext)
 
     const [userName, setUserName] = useState(
         {
@@ -36,6 +41,11 @@ const LogComponent = () => {
             alert('Porfavor digitar todos tus datos.')
         }else{
             login()
+            setUserData({
+                name: userName.name,
+                id: userId.idUser
+            })
+            navigate('/scan')
         }
     }
 
@@ -55,8 +65,9 @@ const LogComponent = () => {
                     placeholder={'Numero de Indetificacion'} 
                     className='input_logo_place' onChange={handleChangeId}></input></div>
                     <div className="log_btn">
-                        <button type="submit" onClick={handleSubmit}>
-                            <Link to={'/scan'} className={'links'} state={{username: userName.name}}>Ir a registrar productos!</Link>
+                        <button type="submit" onClick={handleSubmit} className="bg-blue-200 text-black active:bg-blue-500 
+                        font-bold px-6 py-3 rounded-md shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1">
+                            <Link to={'/scan'} className={'links'}>Ir a registrar productos!</Link>
                         </button>
                     </div>
                 </div>

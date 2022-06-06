@@ -1,11 +1,25 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { shopCart } from "../context/ShopCart";
 import ProtectedRoutes ,{ logout } from "./protectedRoutes";
 
-const Navbar = () =>{
+const Navbar = ({tittle}) =>{
+
+    const {setCartProducts} = useContext(shopCart);
+
+    const navigate = useNavigate()
+
+    const handleLogOut = () =>{
+        setCartProducts([])
+        logout()
+        navigate('/')
+    }
+
     return(
-    <div>
-        <button className="backButton" onClick={logout}>
-            <Link to={'/'} className={'links'}>Volver</Link>
+    <div className="mt-2">
+        <button className="bg-blue-300 text-black active:bg-blue-500 
+      font-bold px-6 py-3 rounded-md shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1" onClick={handleLogOut}>
+            <Link to={'/'} className={'links'}>{tittle}</Link>
         </button>
     </div>
     );

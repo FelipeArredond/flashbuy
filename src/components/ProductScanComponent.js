@@ -1,62 +1,68 @@
 import ProductComponent from "./ProductComponent";
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { api } from "../App";
+import { useContext, useEffect, useState } from "react";
+import { userContext } from "../context/User";
+import Modal from "./Modal";
+import { shopCart } from "../context/ShopCart";
+import { useNavigate } from "react-router-dom";
 
 
 const ProductScanComponent = () => {
 
-    const [products, setProducts] = useState([]);
+    const [payValue, setPayValue] = useState(0);
 
-     const getProducts = async () =>{
-        const response = await fetch(api);
-        const products = await response.json()
-        setProducts(products)
-    }
+    const {userData} = useContext(userContext)
+    const {cartProducts, setTotal, setCartProducts} = useContext(shopCart)
 
-    const location = useLocation();
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        getProducts()
-    }, [])
-
-    const productsMap = products.map((product) => {
+    const productsMap = cartProducts.map(product => {
         return (
                 <ProductComponent name={product.name}
                 price={product.price} />
         );
     });
-    
-    var price = 0;
 
-    const priceFinder = products.map((product) => {
-        return (
-                price = price + parseInt(product.price,10)
-        );
-    });
+    useEffect(()=>{
+        cartProducts.map((product) => {
+            setPayValue(payValue + parseInt(product.price,10))
+        });
+    },[cartProducts])
 
-    const [payValue, setPayValue] = useState(price);
+    const handleReceiptGen = () =>{
+        setTotal(payValue)
+        navigate('/receipt')
+    }
+
+    const handleResetAll = () =>{
+        setCartProducts([])
+        setPayValue(0)
+    }
+
     var today = new Date(),
     date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     const [currentDateTime, setCurrentDateTime] = useState(date)
     
     return(
             <div className="productsContainer"> 
-                <Navbar/>
+                <Navbar tittle={'Volver'} />
                 <div className="products_scanned">
                     <div className="products_path">
                         <h1>Productos Escaneados</h1>
-                        {productsMap}
+                        {cartProducts.length===0?<h2>No hay productos aun</h2>:productsMap}
+                        <Modal/>
+                        {cartProducts.length!==0?<button className="bg-blue-300 text-black active:bg-blue-500 
+                         font-bold px-6 py-3 rounded-md shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ml-2 mt-2" onClick={handleResetAll}>Eliminar todo</button>:<a>.</a>}
                     </div>
                     <div className="products_info_path">
                         <h1>Informacion de Pago</h1>
                         <h3 className='total_to_pay'>
                             {currentDateTime}</h3>
-                        <h3 className="total_to_pay">Hola {location.state.username}!</h3>
+                        <h3 className="total_to_pay">Hola {userData.name}!</h3>
                         <h3 className='total_to_pay'>
                             Total a Pagar: $ {payValue}</h3>
-                        <button className="pay_button">Ir a pagar!</button>    
+                        <button className="bg-blue-300 text-black active:bg-blue-500 
+                         font-bold px-6 py-3 rounded-md shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ml-2 mt-2" onClick={handleReceiptGen}>Generar Factura!</button>    
                     </div>
                 </div>
             </div>
